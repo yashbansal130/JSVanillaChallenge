@@ -4,7 +4,6 @@ document.addEventListener("keydown",function(e){
     if(!audio) return;
     audio.currentTime=0;
     audio.play();
-    console.log(key);
     key.classList.add('playing');
 });
 function removeTransition(e){
@@ -13,4 +12,3 @@ function removeTransition(e){
 }
 const keys=document.querySelectorAll('.key');
 keys.forEach(key => key.addEventListener('transitionend',removeTransition));
-
